@@ -2,9 +2,11 @@ Fork from [https://git.launchpad.net/~ubuntu-concept/ubuntu/+source/qcom-firmwar
 
 Simple bash script to install the required proprietary firmware for X1E78100 devices on Linux, from the Windows dualboot partition using dislocker to handle BitLocker encryption.
 
-Checkout devices compatibility from [Ubuntu Concept](https://discourse.ubuntu.com/t/ubuntu-concept-snapdragon-x-elite/48800).
-
-Devices we have seen successful installations on:
+To run it, just do:
+```bash
+git clone https://github.com/Ailakks/qcom-firmware-extract
+bash ./qcom-firmware-extract/qcom-firmware-extract
+```
 
 - [Acer Swift 14 AI SF14-11](https://bugs.launchpad.net/ubuntu-concept/+bug/2086235)
 - [ASUS Vivobook S 15](https://bugs.launchpad.net/ubuntu-concept/+bug/2084674)
