@@ -65,7 +65,7 @@ fi
 echo "Mounting Windows partition ${part}..."
 # Decrypt and mount
 if [ "$nobitlocker" -eq 0 ]; then
-	dislocker --readonly "/dev/$part" -- "$tmpdir/dislocker"
+	dislocker --readonly --recovery-password="$(read -s -p 'Recovery password: ' p; echo; echo "$p")" "/dev/$part" -- "$tmpdir/dislocker"
 	mount -t ntfs-3g -oloop,ro "$tmpdir/dislocker/dislocker-file" "$tmpdir/mnt"
 fi
 
